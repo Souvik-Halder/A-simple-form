@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1 class="Myheading" style="text-align:center;"> Submission Form</h1>
+    <form action="post" class="container-form" name="form" style="padding: 30px;">
+        <div style="margin:20px;"  class="container-name">
+            <label >Name</label>
+            <input style="margin-left:10px;" type="text" id="name" placeholder="Enter your name here">
+        </div>
+        <div style="margin:20px;" class class="container-mail">
+            <label >Email</label>
+            <input style="margin-left:10px;" type="email" id="email"e placeholder="Enter your email here">
+        </div>
+        <div style="margin:20px;" class class="container-pass">
+            <label >password</label>
+            <input style="margin-left:10px;" type="password" name="password" id="password" placeholder="Enter your password">
+        </div>
+        <div style="margin:20px;" class class="container-confpass">
+            <label >Confirm Password</label>
+            <input style="margin-left:10px;" type="password" id="cppassword" placeholder="Enter the same password">
+        </div>
+        <div style="margin:20px;" class class="container-radbtn">
+            <label >Gender</label>
+            <label>Male</label>
+            <input style="margin-left:10px;" type="radio" name="Myname" value="Male">
+            <label>Female</label>
+            <input style="margin-left:10px;" type="radio" name="Myname" value="Female">
+        </div>
+        <div style="margin:20px;" class class="container-addr">
+            <label style="margin-bottom: 20px;">Address</label>
+            <textarea name="Addr" style="margin-left: 5px;" id="tarea">Enter your Address here</textarea>
+        </div>
+        <div style="margin:20px;" class class="container-state">
+            <label>State</label>
+            <select>
+                <option value="">Select</option>
+                <option value="Andhrapradesh">Andhrapradesh</option>
+                <option value="WestBengal">WestBengal</option>
+                <option value="Odhisha">Odhisha</option>
+                <option value="Uttarpradesh">Uttarpradesh</option>
+                <option value="Bihar">Bihar</option>
+            </select>
+        </div>
+        <div style="margin:20px;" class class="container-hob">
+            <label>Hobby</label>
+            <br>
+            <label>Football</label>
+            <input style="margin-left:10px;" type="checkbox" name="Myname" value="">
+            <label>Cricket</label>
+            <input style="margin-left:10px;" type="checkbox" name="Myname" value="">
+            <label>Badminton</label>
+            <input style="margin-left:10px;" type="checkbox" name="Myname" value="">
+            <label>Music</label>
+            <input style="margin-left:10px;" type="checkbox" name="Myname" value="">
+        </div>
+        <div class="container-agrmnt">
+            <input type="checkbox">
+            <label>I accepts terms and conditions</label>
+        </div>
+    </form>
+    <div class="btn-btn-primary">
+        <input type="button" value="Submit" style="background-color: rgb(95, 196, 65); border-radius:0.5cm; border-color:rgb(95, 196, 65);padding:6px ;margin-left:100px; " onclick="handleclick()">
+        <p id="demo"></p>
+    </div>
+    <script>
+  let handleclick=()=>{
+    let name=document.getElementById("name").value;
+     let email= document.getElementById("email").value;
+     let password =document.getElementById("password").value;
+     let cppassword = document.getElementById("cppassword").value;
+     let address=document.getElementById("tarea").value;
+    document.getElementById("demo").innerHTML="Your name is "+name+" Your email is "+email+" Your password is "+password+" Your address is "+address;
+  }
+    </script>
+</body>
+</html>
